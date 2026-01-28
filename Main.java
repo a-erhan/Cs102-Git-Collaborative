@@ -22,11 +22,12 @@ public class Main {
     }
     public int[] minmax (int[] a) {
             int[] answer;
+                int min = 0;
+                int max = 0;
             if(a.length == 0) {
                 return null;
             } else {
-                int min = 0;
-                int max = 0;
+                
                 for(int i = 0; i < a.length; i++) {
                     if(a[i] < min) {
                         min = a[i];
