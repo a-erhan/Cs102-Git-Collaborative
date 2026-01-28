@@ -24,7 +24,7 @@ public class Main {
                         max = a[i];
                     }
                 }
-            }
             return new int[]{min, max};
+            }
         }
 }
