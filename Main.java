@@ -19,5 +19,23 @@ public class Main {
             ans[i] = rd.nextInt(100);
         }
         return ans;
-    }   
+    }
+    public int[] minmax (int[] a) {
+            int[] answer;
+            if(a.length == 0) {
+                return 0;
+            } else {
+                int min = 0;
+                int max = 0;
+                for(int i = 0; i < a.length; i++) {
+                    if(a[i] < min) {
+                        min = a[i];
+                    }
+                    if(a[i] > max) {
+                        max = a[i];
+                    }
+                }
+            }
+            return new int[]{min, max};
+        }
 }
