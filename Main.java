@@ -23,7 +23,7 @@ public class Main {
     public int[] minmax (int[] a) {
             int[] answer;
             if(a.length == 0) {
-                return 0;
+                return null;
             } else {
                 int min = 0;
                 int max = 0;
