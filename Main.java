@@ -21,7 +21,7 @@ public class Main {
         }
         return ans;
     }
-    public int[] minmax (int[] a) {
+    public static int[] minmax (int[] a) {
             int[] answer;
                 int min = 0;
                 int max = 0;
@@ -59,32 +59,33 @@ public class Main {
             return sum;
         }
 
-    public static main(String[] args){
-        Scanner input = new Scanner();
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
         int option = 0;
         System.out.print("Enter array size:");
         int arrraySize = input.nextInt();
         int[] array = createRandomArray(arrraySize);
         while (option != 4){
-            System.out.print("1) Minimum and maximum of the Array \n 2) Normalized Array \n  3) The sum of elements with odd- and even-numbered indexes \n 4) Exit \n Choose funtion: ");
+            System.out.print("1) Minimum and maximum of the Array \n2) Normalized Array \n3) The sum of elements with odd- and even-numbered indexes \n4) Exit \n Choose funtion: ");
             option = input.nextInt();
             switch (option){
                 case 1:
                     int[] minMax = minmax(array);
-                    System.out.print("Minimum of array:" + minMax[1] + ", maximum of array:" + minMax[2]);
+                    System.out.println("Minimum of array:" + minMax[0] + ", maximum of array:" + minMax[1]);
                     break;
                 case 2:
                     int[] averageArray = average(array);
-                    System.print.out("Normalized array:");
+                    System.out.print("Normalized array:");
                     for (int i = 0; i < array.length; i++){
                         System.out.print(averageArray[i]+ " ");
                     }
+                    System.out.println();
                     break;
                 case 3:
-                    System.print.out("Sum of odd indexes elements:" + findTheSum(array, true));
-                    System.print.out("Sum of even indexes elements" + findTheSum(array, false));
+                    System.out.println("Sum of odd indexes elements: " + findTheSum(array, true));
+                    System.out.println("Sum of even indexes elements: " + findTheSum(array, false));
                 case 4:
-                    System.out.print("Bye Bye!");
+                    System.out.println("Bye Bye!");
                     break;
             }
         }
